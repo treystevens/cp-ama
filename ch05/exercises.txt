@@ -1,0 +1,68 @@
+1.
+a) 1
+b) 1
+c) 1
+d) 0
+
+2.
+a) 1
+b) 1
+c) 1
+d) 1
+
+3.
+a) 1
+   3 5 5
+b) 0
+   7 9 9
+c) 1
+   8 9 9
+d) 1
+   2 2 2
+
+4. (i > j) - (i < j) 
+    
+5. The if statement is legal. If n was 0, it would execute 
+   the print statement in the if statement.
+
+6. The if statement is legal. The if statement's 
+   block of statements does not get executed.
+
+7. if i = 17  :  17
+   if i = -17 :  17
+
+8. 
+a) age >= 13 && age <= 19 ? teenager = true : teenager = false;
+
+b) teenager = false
+   if(age >= 13 && age <= 19) teenager = true;
+
+9. They are equivalent.
+
+10. Hits case 1 and since there are no break statements 
+    it "falls through" printing out: onetwo
+
+11. 
+    switch (area_code) {
+    case 229:
+        printf("Albany");
+        break;
+    case 404:
+    case 470:
+    case 678:
+    case 770:
+        printf("Atlanta");
+        break;
+    case 478:
+        printf("Macon");
+        break;
+    case 706:
+    case 762:
+        printf("Columbus");
+        break;
+    case 912:
+        printf("Savannah");
+    default:
+        printf("Area code not recognized");
+        break;
+    }

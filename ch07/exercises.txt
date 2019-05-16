@@ -1,0 +1,62 @@
+1. 
+a) 63
+b) 119
+c) 2748
+
+2.
+a) float
+b) float
+c) not legal
+d) not legal
+e) float
+
+
+3. b is not legal.
+
+4. d is not legal.
+
+5. b.
+
+6. 
+a) char
+b) short
+c) short
+d) long
+
+7.
+a) \10
+b) \12
+c) \15
+d) \11
+
+8. 
+a) \x08
+b) \x0a
+c) \x0d
+d) \x09
+
+9. int.
+
+10. unsigned int.
+
+11. double.
+
+12. d = i + f 
+    - i gets promoted to a float
+    - i and f is evaluated and becomes a float.
+    - the evaluated float becomes a double
+
+13. 
+a) -3 int
+b) 7 long
+c) 6.5f float
+d) 3.75 double
+e) -1.0 double
+f) 6 int
+
+14. No, possible to cause overflow from type float being being converted to type int.
+
+15. 
+typedef unsigned char Int8
+typedef short Int16
+typedef int Int32

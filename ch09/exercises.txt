@@ -1,0 +1,258 @@
+1.
+double triangle_area(double base, double height);
+double triangle_area(double base, double height)
+{
+    product = base * height;
+    return product / 2;
+}
+
+2.
+int check(int x, int y, int n)
+{
+    if(x => 0 && x <= n -1 && y => 0 && y <= n -1 &&)
+        return 1;
+    else
+        return 0;
+}
+
+3.
+void gcd(int m, in n)
+{
+
+    int rem;
+        while (n != 0)
+        {
+            rem = m % n;
+            m = n;
+            n = rem;
+        }
+        printf("Greatest common divisor: %d\n", m);
+}
+
+4.  Answer from website.
+int day_of_year(int month, int day, int year)
+{
+  int num_days[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+  int day_count = 0;
+
+  for (int i = 1; i < month; i++)
+    day_count += num_days[i-1];
+
+  if (year % 4 == 0 && month > 2)
+    day_count++;
+
+  return day_count + day;
+}
+
+5. 
+int num_digits(int n)
+{
+    int counter = 0;
+    while(n > 0){
+        n /= 10;
+        counter++;
+    }
+
+    return counter;
+}
+
+
+6. 
+int digit(int n, int k)
+{
+    for (int i = 1; i < k; i++)
+        n /= 10;
+
+    return n % 10;
+}
+
+7. They are all legal.
+The values returned from the function will be converted to the return type and then converted again depending on if they are being assigned to a different type.
+
+8. a, and b.
+
+9. 1 2
+
+10. 
+
+a)
+int largest(int a[], int N){
+    int max = a[0];
+
+    for(int i = 0; i < N; i++){
+        if( max < a[i])
+            max = a[i];
+    }
+
+    return max;
+}
+
+b) 
+int average(int a[], int N){
+    int avg = 0;
+
+    for(int i = 0; i < N; i++){
+        avg += a[i];
+    }
+
+    return avg / N;
+}
+
+c) 
+int average(int a[], int N){
+    int counter = 0;
+
+    for(int i = 0; i < N; i++){
+        if(a[i] > 0)
+            counter++;
+    }
+
+    return counter;
+}
+
+11. 
+#include <ctype.h>
+float compute_GPA(char grades[], int n){
+    float sum 0.0f;
+
+    for(int i = 0; i < n; i++){
+       switch(toupper(grades[i])) {
+            case 'A':
+                total += 4.0F;
+                break;
+            case 'B':
+                total += 3.0F;
+                break;
+            case 'C':
+                total += 2.0F;
+                break;
+            case 'D':
+                total += 1.0F;
+                break;
+            case 'F':
+            default:
+                break;
+        }
+
+    }
+    return sum \ n;
+
+}
+
+
+12. 
+double inner_product(double a[], double b[], int n)
+{
+
+    double total = 0.0;
+
+    for(int i = 0; i < n; i++)
+        total += a[i] * b[i];
+
+    return total;   
+}
+
+13.
+int evaluate_position(char board[8][8])
+{
+    int white = 0, black = 0;
+
+    for(int i = 0; i < 8; i++){
+        for(int j = 0; j < 8; j++){
+            switch(board[i][j]) {
+                case 'Q':
+                    white += 9;
+                    break;
+                case 'q':
+                    black += 9;
+                    break;
+                case 'R':
+                    white += 5;
+                    break;
+                case 'r':
+                    black += 5;
+                    break;
+                case 'B':
+                    white += 3;
+                    break;
+                case 'b':
+                    black += 3;
+                    break;
+                case 'N':
+                    white += 3;
+                    break;
+                case 'n':
+                    black += 3;
+                    break;
+                case 'P':
+                    white++;
+                    break;
+                case 'p':
+                    black++;
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+    return white - black;
+}
+
+14.
+bool has_zero(int a[], int n)
+{
+    int i;
+    for(i = 0; i < n; i++){
+        if(a[i] == 0)
+            return true;
+    }
+
+    return false;
+}
+
+15. 
+double median(double x, double y, double z)
+{
+    double result;
+
+    if (x <= y)
+        if (y <= z) result = y;
+        else if (x <= z) result = z;
+        else result = x;
+    else {
+        if (z <= y) result = y;
+        else if (x <= z) result = x;
+        else result = z;
+    }
+
+  return result;
+}
+
+16.
+int fact(int n)
+{
+    return n <= 1 ? 1 : n * fact(n - 1);
+}
+
+17.
+int fact(int n)
+{
+    int total = 0;
+
+    for(int i = 1; i <= n; i++)
+        total *= i;
+
+    return total;
+}
+
+18. 
+void gcd(int m, in n)
+{
+
+    if(n == 0)
+        return m
+    else
+        return gcd(n, n % n)
+}
+
+19. The function prints the binary representation of the argument passed to it.

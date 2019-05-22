@@ -1,0 +1,224 @@
+1.
+c) will not work because expecting string as second argument.
+b) will not work because second argument is a string when it expects a char.
+e) will not work because first input to printf expects a string.
+h) will not work because expects char instead of string
+i) will not work because expects string and not char type.
+j) puts by default outs a newline, the argument is adding another newline character
+
+
+2. 
+a) illegal because being assed a pointer.
+b) prints a.
+c) abc.
+d) illegal, only accepts pointers.
+
+3. 
+i: 12
+s: abc34
+j: 56
+
+4.
+a)
+int read_line(char s[], int n)
+{
+    int ch, i = 0;
+
+    while((ch = getchar()) == ' ');   
+
+    while((ch = getchar()) != '\n')
+        if (i < n)
+            str[i++] = ch;
+    str[i] = '\0';
+    return i;
+}
+
+
+b) 
+int read_line(char s[], int n)
+{
+    int ch, i = 0;
+  
+    while (!isspace(ch = getchar()))
+        if (i < n)
+            str[i++] = ch;
+    str[i] = '\0';
+    return i;
+}
+
+
+c)
+int read_line(char s[], int n)
+{
+    int ch, i = 0;
+
+ 
+    while((ch = getchar()) != '\n')
+        if (i < n)
+            str[i++] = ch;
+    str[i] = '\n';
+    str[++i] = '\0';
+    return i;
+}
+
+
+d)
+int read_line(char str[], int n)
+{
+  int ch, i;
+
+  for (i = 0; i < n; i++) {
+    ch = getchar();
+    if (ch == '\n')
+      break;
+    str[i] = ch;
+  }
+  str[i] = '\0';
+  return i;
+}
+
+5.
+a) 
+void capitalize(char s[], int n)
+{
+    for (int i = 0; s[i] != '\0'; i++)
+        s[i] = toupper(s[i]);
+}
+
+
+b)
+void capitalize(char *s)
+{
+    char *c = s;
+    while (*c != '\0')
+    {
+        *c = toupper(*c);
+        c++;
+    }
+}
+
+6.
+void censor(char *s)
+{
+    char *c = s;
+    while(*c != '\0'){
+        if (*c == 'f' && *(c + 1) == 'o' && *(c + 2) == 'o'){
+            *c = 'x';
+            *(c + 1) = 'x';
+            *(c + 2) = 'x';
+            }
+
+        c++;
+    }
+
+    printf("%s\n", s);
+}
+
+7. d - adds the null character to the end of the string.
+
+8. 
+tired-or-wired
+*reminder: strcmp copies up to s2's null character.
+
+9. computers
+
+10. We're passing in a pointer that isn't assigned to anything. May modify some unknown memory in use.
+
+11.
+int strcmp(char *s, char *t)
+{
+    for(; *s == *t; s++, t++)
+        if(!(*s))
+            return 0;
+    return *s - *t;
+}
+
+alt)
+int strcmp(char *s, char *t)
+{
+    while(*s++ == *t++)
+        if(!(*s))
+            return 0;
+    return *s - *t;
+}
+
+12.
+void get_extension(const char *file_name, char *extension)
+{
+    int n = strlen(file_name);
+    char *p = file_name + n;
+
+    for (; p > file_name; p--)
+    {
+        if (*p == '.')
+        {
+            strcpy(extension, ++p);
+            return;
+        }
+    }
+    strcpy(extension, "");
+}
+
+13.
+void build_index_url(const char *domain, char *index_url)
+{
+    char *str1 = "http://www.",
+         *str2 = "/index.html";
+
+    strcat(strcat(strcpy(index_url, str1), domain), str2);
+}
+
+14. 
+Grinch  // puts places a newline
+
+15.
+a) 3
+b) 0
+c) position of the character that is not found in both strings.
+
+16. 
+void count_spaces(const char s[]){
+ 
+    int count = 0;
+
+    while(*s)
+        if(*s++ == ' ')
+            count++
+
+    return count;
+}
+
+17.
+#include <ctype.h>
+bool test_extension(const char *file_name, const char *extension){
+
+    while(*file_name++ !== '.');
+
+    while(*file_name && *extension){
+        if(toupper(*file_name++) != toupper(*extension++))
+            return false;
+    }
+    return true;
+}
+
+18.
+void remove_filename(char *url){
+    char *p = url;
+    while (*url++) {
+        if (*url == '/')
+            p = url;
+    }
+    *p = '\0';
+}
+
+void remove_filename(char *url){
+
+    while(*url++){
+        if(*url == '/' && *(url + 1) != '/' && *(url - 1) != '/')
+        {
+            *url = '\0';
+            return;
+        }
+    }
+}
+
